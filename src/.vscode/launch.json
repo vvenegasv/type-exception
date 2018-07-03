@@ -11,7 +11,7 @@
             "name": "Iniciar programa",
             "program": "${workspaceFolder}/test/main-test.ts",
             "outFiles": [
-                "${workspaceFolder}/**/*.js"
+                "${workspaceFolder}/lib/**/*.js"
             ]
         }
     ]

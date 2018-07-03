@@ -1,0 +1,40 @@
+{
+  "name": "type-exception",
+  "version": "1.0.0",
+  "description": "Package for Error class with inner error and aggregate erros ",
+  "main": "type-exception",
+  "directories": {
+    "lib": "lib",
+    "test": "lib/test"
+  },
+  "dependencies": {
+   "typescript": "^2.6.1"
+ },
+ "devDependencies": {
+   "@types/chai": "^4.0.5",
+   "@types/mocha": "^2.2.44",
+   "chai": "^4.1.2",
+   "del": "^3.0.0",
+   "gulp": "^3.9.1",
+   "gulp-typescript": "^3.2.3",
+   "mocha": "^4.0.1",
+   "mochawesome": "^2.3.1"
+ },
+  "scripts": {
+    "pretest": "tsc",
+    "test": "nyc mocha",
+    "watch": "mocha-typescript-watch",
+    "prepare": "tsc"
+  },
+  "keywords": [
+    "TypeException",
+    "Error",
+    "Exception",
+    "AggregateException",
+    "AggregateError",
+    "InnerError",
+    "InnerException"
+  ],
+  "author": "Vladimir Venegas",
+  "license": "MIT"
+}
