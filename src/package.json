@@ -1,12 +1,13 @@
 {
   "name": "type-exception",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Package for Error class with inner error and aggregate erros ",
-  "main": "type-exception",
+  "main": "./src/index.ts",
   "directories": {
     "lib": "lib",
     "test": "lib/test"
   },
+  "homepage": "https://github.com/vvenegasv/type-exception",
   "dependencies": {
    "typescript": "^2.6.1"
  },
