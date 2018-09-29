@@ -1,5 +1,5 @@
 import { should } from 'chai';
-import { TypeException, nameof } from "../src/index";
+import { TypeException, nameof } from "../lib/index";
 should();
 
 describe('simple error', () => {
@@ -12,7 +12,7 @@ describe('simple error', () => {
                 throw new Error('Ups, something was wrong');
             }
             catch(err){
-                return new TypeException('There is an error on division', err);
+                return new TypeException('There is an error =(', err);
             }
         }
     });
@@ -20,8 +20,8 @@ describe('simple error', () => {
     it('check message error', () => {
         let err = returnNewTypeException();
         let message = err.toString();
-        console.log(message);
-        message.should.contains("Error: There is an error on division");
+        //console.log(message);
+        message.should.contains("Error: There is an error on toExponential");
         message.should.contains("Inner Error: Cannot read property 'toExponential' of undefined");
         
 
@@ -33,7 +33,7 @@ describe('simple error', () => {
                 return new Error('Error was not raised');
             }
             catch(err){
-                let newErr = new TypeException('There is an error on division', err);
+                let newErr = new TypeException('There is an error on toExponential', err);
                 let text1 = "some message";
                 let num1 = 4;
                 let date1 = Date.now;
@@ -44,4 +44,5 @@ describe('simple error', () => {
             }
         }
     });
+    
 })

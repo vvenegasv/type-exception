@@ -1,29 +1,33 @@
 {
   "name": "type-exception",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Package for Error class with inner error and aggregate erros ",
-  "main": "./src/index.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "lib/test"
-  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "homepage": "https://github.com/vvenegasv/type-exception",
   "dependencies": {
-   "typescript": "^2.6.1"
- },
- "devDependencies": {
-   "@types/chai": "^4.0.5",
-   "@types/mocha": "^2.2.44",
-   "chai": "^4.1.2",
-   "del": "^3.0.0",
-   "gulp": "^3.9.1",
-   "gulp-typescript": "^3.2.3",
-   "mocha": "^4.0.1",
-   "mochawesome": "^2.3.1"
- },
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.5",
+    "@types/mocha": "^2.2.44",
+    "chai": "^4.1.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.3",
+    "mocha": "^4.0.1",
+    "mochawesome": "^2.3.1",
+    "ts-node": "^7.0.1"
+  },
+  "files": [
+    "/dist/lib/"
+  ],
+  "directories": {
+    "test": "./test"
+  },
   "scripts": {
     "pretest": "tsc",
-    "test": "nyc mocha",
+    "test": "mocha -r ts-node/register dist/test/**/*.js",
     "watch": "mocha-typescript-watch",
     "prepare": "tsc"
   },
